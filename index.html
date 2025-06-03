@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FB Auto Poster Dashboard</title>
+    <style>
+        body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+        input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; }
+        button { padding: 10px 15px; }
+        pre { background: #f4f4f4; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>📤 Facebook Auto Poster</h2>
+    <form method="POST">
+        <label>New Message:</label>
+        <textarea name="message" rows="2"></textarea>
+
+        <label>New Token:</label>
+        <textarea name="token" rows="2"></textarea>
+
+        <label>Convo ID:</label>
+        <input name="convo" value="{{ convo }}"/>
+
+        <label>Delay (seconds):</label>
+        <input name="delay" value="{{ delay }}"/>
+
+        <button type="submit">✅ Submit</button>
+    </form>
+
+    <h3>📄 Existing Messages</h3>
+    <pre>{{ messages }}</pre>
+
+    <h3>🔐 Tokens</h3>
+    <pre>{{ tokens }}</pre>
+</body>
+</html>
